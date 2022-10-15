@@ -1701,7 +1701,7 @@ bool NetPlayClient::StartGame(const std::string& path)
   for (unsigned int i = 0; i < 4; ++i)
   {
     Config::SetCurrent(Config::GetInfoForWiimoteSource(i),
-                       m_wiimote_map[i] > 0 ? WiimoteSource::Emulated : WiimoteSource::None);
+                       m_wiimote_map[i] > 0 ? WiimoteSource::Real : WiimoteSource::None);
   }
 
   // boot game
