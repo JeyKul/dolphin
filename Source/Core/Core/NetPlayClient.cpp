@@ -1698,10 +1698,11 @@ bool NetPlayClient::StartGame(const std::string& path)
     Movie::BeginRecordingInput(controllers, wiimotes);
   }
 
-  for (unsigned int i = 0; i < 4; ++i)
-  {
-    Config::SetCurrent(Config::GetInfoForWiimoteSource(i),
-                       m_wiimote_map[i] > 0 ? WiimoteSource::Real : WiimoteSource::None);
+// Not used so we can either set our mode to "Emulated Wii Remote" or "Real Wii Remote"
+//  for (unsigned int i = 0; i < 4; ++i)
+//  {
+//    Config::SetCurrent(Config::GetInfoForWiimoteSource(i),
+//                       m_wiimote_map[i] > 0 ? WiimoteSource::Real : WiimoteSource::None);
   }
 
   // boot game
